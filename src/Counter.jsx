@@ -1,8 +1,8 @@
 import React from 'react'
 import useCounter from './useCounter'
 function Counter(){
- var  [conuter , inc, dec] = useCounter()
-
+ var  [conuter , setcounter] = React.useState(0)
+    
     return(
         <div className='border m-2 p-2'>
         <h2>Counter:{counter}</h2>
