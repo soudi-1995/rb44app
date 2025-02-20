@@ -21,8 +21,7 @@ function StudentForm() {
 
         }),
         onSubmit:(values)=>{
-            var [res, setres] = React.useState(values)
-            console.log(values)
+           
         }
     })
     return (
