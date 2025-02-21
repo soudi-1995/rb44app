@@ -6,25 +6,29 @@ import Table from './table'
 
 
 function StudentForm() {
+    var [prdct, setprdct] = React.useState([])
+
     var studentForm = useFormik({
         initialValues : {
             firstname:'',
-            lastname:'',
+            lastname:'', 
             age:'',
             gender:'',
-            Skills:''
+            Skills:[  ]
         },
         validationSchema:Yup.object({
             firstname:Yup.string().required("* 'mundu peru raayi'").max(5,'max only 5 letters'),
-            age:Yup.number().required("* Age marchipoyava!")
-        
-
+            age:Yup.number().required("* Age marchipoyava!")  
         }),
         onSubmit:(values)=>{
+            setprdct([...prdct,values])
+           console.log(values)
            
         }
+
     })
-    return (
+   
+    return (<div>
         <div className='border border-2 border-danger m-2 p-2'>
         
         <h2>Student Form</h2>
@@ -50,11 +54,13 @@ function StudentForm() {
         <input type="checkbox" name='skill' value='NOdeJS' onChange={studentForm.handleChange}/>NOdeJS
         <br />
         <button type='submit'>Save Details</button> 
-        <Table> </Table>
+        
         </form>
-        
         </div>
+
         
+        <Table prdct={prdct}> </Table>
+        </div>
       
     ) 
 }
