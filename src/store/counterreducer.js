@@ -1,5 +1,6 @@
 const initialState = {
     count : 0
+   
 }
 var counterReducer = function (state=initialState, action){
     if(action.type==='INC'){
@@ -11,3 +12,4 @@ var counterReducer = function (state=initialState, action){
 
         return state
 }
+export default counterReducer
