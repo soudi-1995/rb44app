@@ -14,11 +14,15 @@ function StudentForm() {
             lastname:'', 
             age:'',
             gender:'',
-            Skills:[  ]
+            Skills:[ ]
         },
         validationSchema:Yup.object({
-            firstname:Yup.string().required("* 'mundu peru raayi'").max(5,'max only 5 letters'),
-            age:Yup.number().required("* Age marchipoyava!")  
+            firstname:Yup.string()
+            .required("* 'mundu peru raayi'")
+            .max(5,'max only 5 letters')
+            .test('custom validation1','recheck', ()=>{return false }),
+           
+           
         }),
         onSubmit:(values)=>{
             setprdct([...prdct,values])
