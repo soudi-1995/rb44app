@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './Counter';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
-    <div>
-      <h1 className='bg-success'>Register here</h1>
-      <h2>hello</h2>
-      <Counter></Counter>
-    </div>
+    <Provider>
+ <div>
+      <h1>Application</h1>
+      </div>
+    </Provider>
+   
   );
 }
 
