@@ -1,5 +1,5 @@
-import { combineReducers, createStore } from "redux";
-import counterReducer from './counterreducer'
-import productReducer from "./prdct"; 
-var store = createStore(combineReducers({counter:counterReducer,productReducer}))
-export default store  
+import {createStore, combineReducers} from 'redux'
+import counterReducer from './reducers/counterreducer'
+import todoReducer from './reducers/todolistreducer'
+var store = createStore(combineReducers({counterReducer,todoReducer}))
+export default store;

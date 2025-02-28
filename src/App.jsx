@@ -1,22 +1,17 @@
-
 import React from 'react'
-import { Provider } from 'react-redux';
-import store from './store/store';
-import Counter from "./counter"
-import Products from "./displayproducts" 
-
-
+import Counter from './Counter';
+import Todolist from './todolist'
+  
 function App() {
   return (
-    <Provider store={store} >
+    
       <div>
       <h1>Application</h1>
       <Counter></Counter>
-      <Products></Products>
+      <Todolist></Todolist>
+    
       </div>
-    </Provider>
    
   );
 }
-
 export default App;
