@@ -1,8 +1,7 @@
 import React from 'react'
-import useCounter from './useCounter'
+import useCounter from './usecounter'
 function Counter(){
- var  [conuter , inc, dec] = useCounter()
-
+    var [counter, inc , dec] = useCounter()
     return(
         <div className='border m-2 p-2'>
         <h2>Counter:{counter}</h2>
