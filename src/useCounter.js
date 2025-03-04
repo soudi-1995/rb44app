@@ -1,15 +1,16 @@
 import React from 'react'
-
+import useLocalStorageState from './localstoragecounter'
 function useCounter(){
-
-    
-        var [counter, setcounter] = React.useState(0)
-        function inc(){
-            setcounter(counter+1)
-        }
-        function dec(){
-            setcounter(counter-1)
-        }
-        return [counter , inc, dec]
+var  [counter , setCounter] =  useLocalStorageState()
+    function inc(){
+        setCounter(counter+1)
+    }
+    function dec(){
+        setCounter(counter-1)
+    }
+    function rst(){
+        setCounter(0)
+    }
+    return [counter, inc, dec, rst]
 }
 export default useCounter
