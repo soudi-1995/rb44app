@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './Counter'
-import Todolist from './Todolist';
+import Counter from './Counter';
 
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       <h1 className='bg-success'>Register here</h1>
       
       <Counter></Counter>
-      <Todolist></Todolist>
+     
     </div>
   );
 }
