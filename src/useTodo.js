@@ -1,18 +1,19 @@
 import React from "react";
 function useTodo(){
-    var [todos,settodo] = React.useState(['a','b'])
-
+    var [todos,settodo] = React.useState([])
     function addTodo(newtodo){
-        settodo((prv)=>{
-            return [...prv, newtodo]
+        settodo((prev)=>{
+            return [...prev,newtodo]
         })
     }
     function delTodo(index){
-        settodo((prv)=>{
-            prv.splice( index, 1)
-            return [...prv]
+        settodo((prev)=>{
+            prev.splice(index,1)
+            return [...prev]
         })
     }
     return [todos, addTodo, delTodo]
 }
 export default useTodo
+
+
