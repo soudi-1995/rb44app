@@ -1,14 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './Counter';
+import Parent from './parent';
+import mycontext from './my context';
 
 function App() {
   return (
+    <mycontext.Provider value={'ram'}>
     <div>
-      <h1 className='bg-success'>Register here</h1>
+      <h1 className='bg-success'>ParentChild</h1>
       <h2>hello</h2>
-      <Counter></Counter>
+      <Parent></Parent>
+     
     </div>
+    </mycontext.Provider>
   );
 }
 
